@@ -1,0 +1,23 @@
+.reportrow{
+padding-top: 10px;
+}
+.issuecontainer {
+  padding: 15px 38px 38px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #dddddd;
+  //position: absolute;
+  //z-index: -1;
+  //padding-top: 15px;
+}
+.issuecontainer .issueshead{
+  background: #4e6070;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+.issuecontainer .issuemain .issuecheckmain{
+  margin-bottom: 5px;
+}
+.issuecheckmaintable{
+  background-color: #fcfcfc;
+}
