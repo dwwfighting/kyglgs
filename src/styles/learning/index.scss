@@ -1,0 +1,448 @@
+.container{
+  background-color: #ffffff;
+}
+.hero {
+    padding-bottom: 50px;
+
+  }
+
+  .hero.hero-normal {
+    padding-bottom: 50px;
+  }
+
+  .hero__categories {
+    position: relative;
+
+  }
+
+  .hero.hero-normal .hero__categories ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 46px;
+    width: 100%;
+    z-index: 9;
+    background: #ffffff;
+  }
+
+  //.hero .hero__search {
+  //  margin-bottom: 0;
+  //  height: 40px;
+  //}
+
+  .hero__categories__all {
+    background: #7fad39;
+    position: relative;
+    padding: 15px 25px 15px 8px;
+    cursor: pointer;
+  }
+
+  .hero__categories__all i {
+    font-size: 16px;
+    color: #ffffff;
+    margin-right: 10px;
+  }
+
+  .hero__categories__all span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+.filter-tree{
+  color: black;
+  background-color: rgba(60, 61, 69, 0.3);
+}
+
+  /*.hero__categories__all:after {*/
+  /*  position: absolute;*/
+  /*  right: 18px;*/
+  /*  top: 9px;*/
+  /*  content: "3";*/
+  /*  font-family: "ElegantIcons";*/
+  /*  font-size: 18px;*/
+  /*  color: #ffffff;*/
+  /*}*/
+
+  .hero__categories ul {
+    border: 1px solid #ebebeb;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  .hero__categories ul li {
+    list-style: none;
+  }
+
+  .hero__categories ul li a {
+    font-size: 16px;
+    color: #1c1c1c;
+    line-height: 39px;
+    display: block;
+  }
+
+  .hero__search {
+    overflow: hidden;
+    //margin-bottom:0px;
+    //background-color: #ffffff;
+  }
+
+
+  //.hero__search__form .hero__search__categories span {
+//  //  position: absolute;
+//  //  right: 50px;
+//  //  top: 14px;
+//  //}
+
+  //.hero__search__form .hero__search__categories:after {
+  //  position: absolute;
+  //  right: 0;
+  //  top: 14px;
+  //  height: 20px;
+  //  width: 1px;
+  //  background: #000000;
+  //  opacity: 0.1;
+  //}
+
+  .hero__search__form  input {
+    width: 70%;
+    border: none;
+    height: 48px;
+    font-size: 14px;
+    color: #0a0a0a;
+    padding-left: 20px;
+  }
+
+  .hero__search__form form input::placeholder {
+    color: #8b8b8b;
+  }
+
+  .hero__search__form form button {
+    position: absolute;
+    right: 0;
+    top: -1px;
+    height: 50px;
+  }
+
+  .hero__search__phone span {
+    float: left;
+    margin-left:20px;
+    margin-top:16px;
+  }
+
+  .hero__search__phone__icon {
+    font-size: 18px;
+    color: #7fad39;
+    height: 50px;
+    width: 50px;
+    background: #f5f5f5;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .hero__search__phone__text {
+    overflow: hidden;
+  }
+
+  .hero__search__phone__text h5 {
+    color: #1c1c1c;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .hero__search__phone__text span {
+    font-size: 14px;
+    color: #6f6f6f;
+  }
+
+  .hero__item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    //padding-left: 75px;
+  }
+
+  .hero__text span {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #7fad39;
+  }
+
+  .hero__text h2 {
+    font-size: 46px;
+    color: #252525;
+    line-height: 52px;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+
+  .hero__text p {
+    margin-bottom: 35px;
+  }
+
+  /*---------------------
+    Categories
+  -----------------------*/
+
+  .categories__item {
+    height: 270px;
+    position: relative;
+  }
+
+  .categories__item h5 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    bottom: 20px;
+    text-align: center;
+  }
+
+  .categories__item h5 a {
+    font-size: 18px;
+    color: #1c1c1c;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 12px 0 10px;
+    background: #ffffff;
+    display: block;
+  }
+
+  .categories__slider .col-lg-3 {
+    max-width: 100%;
+  }
+
+  .categories__slider.owl-carousel .owl-nav button {
+    font-size: 18px;
+    color: #1c1c1c;
+    height: 70px;
+    width: 30px;
+    line-height: 70px;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    -webkit-transform: translateY(-35px);
+    background: #ffffff;
+  }
+
+  .categories__slider.owl-carousel .owl-nav button.owl-next {
+    left: auto;
+    right: -35px;
+  }
+
+                  //style="font-size: 14px;	width: 30%;
+                  //  float: left;
+                  //  font-size: 16px;
+                  //  color: #000000;
+                  //  font-weight: 400;
+                  //  padding-left: 10px;
+                  //  padding-top: 16px;
+                  //  position: relative;"
+
+.hero__search__form {
+    //此处根据屏幕变化后更改
+    width: 70%;
+    height: 50px;
+    border: 1px solid #ebebeb;
+    position: relative;
+    float: left;
+  }
+
+
+.hero__search__form form .hero__search__categories {
+	width:30%;
+	float: left;
+	font-size: 1em;
+	color: #1c1c1c;
+	font-weight: 400;
+	padding-left: 18px;
+	padding-top: 15px;
+	position: relative;
+  background-color: #ffffff;
+}
+
+.select-style {
+    width: 29%;
+
+    /deep/.el-input__inner {
+       border:none;
+    }
+  }
+
+
+.hero__search__form  .select-style:after {
+	position: absolute;
+	right: -5px;
+	top: 10px;
+	height: 20px;
+	width: 1px;
+	background: #000000;
+	opacity: 0.3;
+	content: "";
+}
+.site-btn {
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: 500;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 13px 20px 12px;
+	background: #7fad39;
+	border: none;
+}
+.hero__search__form form .hero__search__categories span {
+	position: absolute;
+	right: 8px;
+	top: 15px;
+}
+
+h5
+{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
+}
+
+p
+{
+  font-size:12px;
+}
+
+.center
+{
+
+  width:100%;
+  display: flex;
+  margin-top:20px;
+  margin-left: 20px;
+  //float:left;
+}
+
+/* End Non-Essential  */
+
+.property-card
+{
+  height:10em;
+  width:8em;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:5px;
+  overflow:hidden;
+  //-webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  //box-shadow:  5px 5px 12px #e1e1e3, -15px -15px 27px #ffffff;
+}
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+/* Top Half of card, image. */
+
+.property-image
+{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+/* Bottom Card Section */
+
+.property-description
+{
+  background-color: #FAFAFC;
+  height:12em;
+  width:14em;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+}
+
+/* Social Icons */
+
+.property-social-icons
+{
+  width:1em;
+  height:1em;
+  background-color:black;
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+
+/* Optional
+
+.property-image-title
+{
+text-align:center;
+position:Relative;
+top:30%;
+opacity:0;
+transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+color:black;
+font-size:1.2em;
+}
+
+.property-card:hover .property-image-title
+{
+opacity:1;
+}
+
+*/
+
+
+/* 规范table css*/
+.rgb196{
+  .criteriaimg{
+    height: 112px;
+    width: 100px;
+    float: left;
+    position: center;
+  }
+  span{
+    position: relative;
+    left: 15px;
+    display: block;
+    font-size: 14px;
+  }
+}
+
+
+ .el-col{
+   @media  (max-width: 1200px){
+      margin-bottom: 8px;
+   }
+   &:last-child {
+      margin-bottom: 0;
+    }
+ }

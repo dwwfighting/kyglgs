@@ -1,0 +1,88 @@
+.compulsivecontiner{
+  height: 300px;
+  width: 100%;
+}
+.x_panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    padding: 2px 17px;
+    display: inline-block;
+    background: rgba(8, 53, 75, 0.8);
+    border: 1px solid rgba(73, 88, 100, 0.2);
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    opacity: 1;
+    -webkit-transition: all .2s ease;
+}
+
+.x_title {
+    border-bottom: 1px solid #E6E9ED;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+
+.panel_toolbox span{
+  color: #fff;
+}
+
+
+/deep/.el-dropdown{
+  position: absolute;
+  right: 18px;
+}
+.complusivecontent{
+  position: relative;
+  top:-9px;
+  width: 100%;
+}
+/deep/.el-dialog{
+  background-color: #08354b;
+  width: 80%;
+  .el-dialog__header{
+    padding: 0;
+    .el-dialog__headerbtn{
+      top:5px;
+      color:#fff;
+      >i{
+        color:#fff;
+      }
+    }
+  }
+  .el-dialog__title{
+    color: #ffffff
+
+  }
+  .el-dialog__body{
+    ul,li{
+      margin:0;
+      padding:0;
+      list-style:none;
+      color: #fff;
+    }
+    span{
+      display: inline-block;
+      color:#fff;
+      padding: 2px 0;
+      line-height:25px;
+      letter-spacing: 4px;
+      width: 100px;
+    }
+    .compulsivecom{
+        letter-spacing:0px;
+    }
+    .compulsivetrace{
+      margin: 15px 0;
+      p {
+        display: inline-block;
+        width: 20%;
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+
+}

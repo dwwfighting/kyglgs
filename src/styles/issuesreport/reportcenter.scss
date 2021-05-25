@@ -1,0 +1,205 @@
+
+.issuecontainer .issueshead{
+  background: #4e6070;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+.issuecontainer .issuemain .issuecheckmain{
+  margin-bottom: 5px;
+}
+.issuecheckmaintable{
+  background-color: #fcfcfc;
+}
+.issuecontainer .issueshead{
+  background: #4e6070;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+.issuecontainer .issuemain .issuecheckmain{
+  margin-bottom: 5px;
+}
+.issuecheckmaintable{
+  background-color: #fcfcfc;
+}
+.cation-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background: #f4f4f4;
+    /*border-style:solid;*/
+    border-bottom: 1px solid rgba(168, 166, 146, 0.5);
+}
+
+  .msg-pagination-container {
+    padding: 5px 5px;
+    background-color: #34495e;
+  }
+
+  .el-dropdown-link {
+    font-size: 16px;
+    cursor: pointer;
+    color: #2a3f54;
+    text-align: right;
+    display: inline;
+  }
+
+  .stickclass {
+    background-color: #b4bccc;
+  }
+
+  /*.filter-container {*/
+  /*  padding-bottom: 10px;*/
+  /*}*/
+
+  .link-type,
+  .link-type:focus {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(32, 160, 255);
+    }
+  }
+
+  .rowclass {
+    margin-top: 10px;
+  }
+
+  .el-tag {
+    padding: 0px 6px;
+  }
+
+  .el-divider {
+    margin: 8px 0px;
+  }
+
+  .inColor {
+    color: #ff1b00;
+    font-size: 16px;
+  }
+
+  .outColor {
+    color: #000000
+  }
+
+  .el-date-editor {
+    width: 260px;
+    /*font-size: 11px;*/
+  }
+
+
+ .cation-list .supercheck {
+    float: left;
+    width: 84px;
+    font-weight: 700;
+    line-height: 126px;
+    position: relative;
+    color: #333;
+  }
+
+  .cation-list .supercheck:after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 60px;
+    border: 1px solid #333;
+    border-width: 0 1px 1px 0;
+    width: 4px;
+    height: 4px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .el-table .warning-row {
+    background: #f9c922;
+  }
+
+  .el-table th, .el-table tr {
+    background: #f9c922;
+  }
+
+  .el-checkbox{
+    color: #000000;
+  }
+
+
+
+
+/* 必要布局样式css */
+
+.cation-content .cation-list:nth-child(1){
+   border-top: 1px solid rgba(75, 128, 50, 0.2);
+}
+.cation-middle {
+    line-height: 16px;
+    padding: 0px 20px;
+    font-size: 14px;
+}
+
+.cation-list {
+    overflow: hidden;
+    border-bottom: 1px solid rgba(75, 128, 50, 0.2);
+}
+
+.cation-list dt {
+    float: left;
+    width: 84px;
+    font-weight: 700;
+    line-height: 41px;
+    position: relative;
+    color: #000000;
+}
+
+:before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*为每个dt元素填加小三角*/
+.cation-list dt:after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 18px;
+    border: 1px solid #333;
+    border-width: 0 1px 1px 0;
+    width: 4px;
+    height: 4px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.cation-list dd {
+    border-bottom: 1px dotted #e0e0e0;
+    margin-left: 64px;
+    overflow: hidden;
+}
+.cation-middle .selectorcommit{
+    margin:0 auto;
+    text-align:center;
+    padding: 3px;
+}
+.cation-list dd a {
+    color: #8d8d91;
+    font-size: 14px;
+    line-height: 14px;
+    height: 14px;
+    float: left;
+    border-right: 1px solid #e0e0e0;
+    padding: 0 18px;
+    margin: 17px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

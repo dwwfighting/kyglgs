@@ -1,0 +1,141 @@
+.tile_count {
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.count {
+    font-size: 30px;
+    line-height: 47px;
+    font-weight: 600;
+
+}
+.tile_stats_count {
+    border-bottom: 1px solid #D9DEE4;
+    padding: 0 10px 0 20px;
+    position: relative
+}
+.tile_stats_count .count {
+    font-size: 30px;
+    line-height: 47px;
+    font-weight: 600;
+    color:#73879c
+}
+.tile_stats_count .count_bottom i {
+    width: 12px
+}
+
+.green {
+    color: #1ABB9C
+}
+.tile_stats_count .count_bottom i {
+    width: 12px
+}
+
+.tile_stats_count:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 65px;
+    border-left: 2px solid #ADB2B5;
+    margin-top: 10px
+}
+
+
+@media (min-width: 768px) {
+    .tile_count .tile_stats_count .count {
+        font-size: 40px
+    }
+}
+.x_panel {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 17px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #E6E9ED;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    opacity: 1;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.x_title {
+    border-bottom: 2px solid #E6E9ED;
+    padding: 1px 5px 6px;
+    margin-bottom: 0px;
+  //text-align:center;
+    h2{
+      color: #2a3f54;
+      margin: 0;
+   }
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 20px;
+  list-style: none;
+}
+.navbar-right {
+    margin-right: 0
+}
+.panel_toolbox {
+    float: right;
+    min-width: 70px
+}
+
+.dropdown
+ {
+  position: relative;
+}
+.dropdown-toggle {
+  white-space: nowrap;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.dropdown-menu {
+  &[x-placement^="top"],
+  &[x-placement^="right"],
+  &[x-placement^="bottom"],
+  &[x-placement^="left"] {
+    right: auto;
+    bottom: auto;
+  }
+}
+
+.x_content {
+    padding: 0 3px 6px;
+    position: relative;
+    width: 100%;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+   p{
+     margin: 0;
+   }
+}
+  .el-dropdown-link {
+    cursor: pointer;
+    color: #2a3f54;
+  }
+  .el-icon-arrow-down {
+    font-size: 12px;
+  }
+.el-dropdown{
+    float:right;
+  //position:;
+    margin-top:-20px ;
+
+}

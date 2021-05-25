@@ -1,0 +1,196 @@
+//@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,900);
+$fontstack_heading: "Merriweather", sans-serif;
+$fontstack_body: "Merriweather", sans-serif;
+
+.block-content {
+  //min-height:100vh;
+}
+block-content p {
+	font-size:1.1em;
+	line-height:1.5;
+	-webkit-font-smoothing:antialiased;
+	margin:0 auto 1em auto;
+}
+.block-content h2 {
+
+	text-align:center;
+	margin:0;
+	font-size:1em;
+	line-height:1;
+	letter-spacing:0.02em;
+
+	@media all and (min-width:40em) {
+
+	font-size: 1em;
+
+	}
+}
+.subtitle {
+	font-family: $fontstack_heading;
+	text-transform:uppercase;
+	text-align:center;
+	font-size:1em;
+	margin: 0;
+}
+.heading-group {
+	margin:0;
+}
+.content h3 {
+	font-size: 1em;
+	line-height:0.8;
+	letter-spacing:0.02em;
+  color:#fff;
+
+	@media all and (min-width:40em) {
+
+	font-size: 0.8em;
+
+	}
+}
+
+
+h1, h2, h3 {
+	font-family: $fontstack_heading;
+	//font-weight:900;
+}
+p {
+	font-family: $fontstack_body;
+	//line-height:1.5;
+}
+
+.l-block-spacing {
+	padding:0;
+}
+
+.l-contained {
+
+	//max-width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:1em;
+	padding-right:1em;
+
+	@media all and (min-width:40em) {
+		padding-left:2em;
+		padding-right:2em;
+	}
+}
+.timeline-list {
+
+	//border-left: 5px solid #ccc;
+	padding-bottom: 1em;
+	position: relative;
+	max-width:700px;
+	margin:0 auto;
+}
+
+.t-block-teal {
+	background: rgba(1,1,1,0);
+}
+.t-block-teal h2 {
+	color:#fff;
+}
+.t-block-teal h3 {
+	color: #ffffff;
+}
+.t-block-teal p {
+	color: #ffffff;
+}
+//list animation
+//scale in the circle, follwoed by the list item
+//the border must also animate in.
+.timeline-list li {
+	margin:0;
+	padding:0;
+  position: relative;
+  list-style-type:none;
+}
+.timeline-list li:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: -1.45em;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: none repeat scroll 0% 0% #02aa9d;
+	border: 5px solid #fff;
+  animation:revealScaleUp 0.75s 0s ease both 1;
+}
+.timeline-list {
+   animation:reveal 2s 0 ease both 1;
+}
+.timeline-list li .content {
+  animation:revealFromLeft 0.5s 0s ease both 1;
+}
+
+.timeline-list li:nth-child(1):before {
+  animation-delay:0.85s;
+}
+.timeline-list li:nth-child(1) .content {
+  animation-delay:1.05s;
+}
+.timeline-list li:nth-child(2):before {
+   animation-delay:1.2s;
+}
+.timeline-list li:nth-child(2) .content {
+  animation-delay:1.5s;
+}
+.timeline-list li:nth-child(3):before {
+  animation-delay:1.8s;
+}
+.timeline-list li:nth-child(3) .content {
+  animation-delay:2.1s;
+}
+.timeline-list li:nth-child(4):before {
+  animation-delay:2s;
+}
+.timeline-list li:nth-child(4) .content {
+  animation-delay:2.3s;
+}
+@keyframes revealFromLeft {
+  0% {
+    transform:translateX(-1em);
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+@keyframes reveal {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@keyframes scaleVertical {
+  0% {
+    transform:scaleY(0);
+
+  }
+  100% {
+    transform:scaleY(1);
+  }
+}
+@keyframes revealScaleUp {
+  0% {
+    opacity:0;
+    transform:scale(0.5);
+  }
+
+
+
+  50% {
+     opacity:1;
+     transform:scale(1.3);
+
+  }
+  100% {
+    opacity:1;
+    transform:scale(1);
+
+  }
+}

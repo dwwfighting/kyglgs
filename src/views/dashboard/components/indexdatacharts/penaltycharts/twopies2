@@ -1,0 +1,152 @@
+<template>
+  <el-row>
+    <el-col :span="24">
+      <!--      <p style="background-color: #ffffff">上级和处室共罚款{{ penalytotal }}元</p>-->
+      <div ref="twopies" :style="{height:'400px',width:'100%' ,background:'#ffffff'}"/>
+    </el-col>
+  </el-row>
+</template>
+
+<script>
+
+  import 'echarts/theme/vintage'
+
+  export default {
+    name: 'Penaltycompie',
+    data() {
+      return {
+        compenaltytotal: this.$store.state.basechartdata.compenaltytotal
+      }
+    },
+    created() {
+      // console.log(this.$store.state.basechartdata.compenaltytotal)
+    },
+    mounted() {
+      this.$nextTick(() => {
+        this.init()
+      })
+    },
+    methods: {
+      init() {
+        var myChart = this.$echarts.init((this.$refs.twopies), 'vintage')
+        var arr = this.compenaltytotal
+        var innerpie = []
+        var outerpie = []
+
+        arr.forEach(function (value, index) {
+          var valuedata = {}
+          if (value['penaltycom__coalcompanyname'] !== 'total') {
+            var childarr = []
+            valuedata.value = value['total']
+            valuedata.name = value['penaltycom__coalcompanyname']
+            valuedata.children = childarr
+            var obj = value
+            delete obj.penaltycom__coalcompanyname
+            delete obj.total
+            var comkeys = Object.keys(obj)
+            for (var i = 0; i < comkeys.length; i++) {
+              var valueinnerobj = {}
+              valueinnerobj.value = obj[comkeys[i]]
+              valueinnerobj.name = comkeys[i]
+              childarr.push(valueinnerobj)
+            }
+            innerpie.push(valuedata)
+            // console.log(valuedata)
+          }
+        })
+
+        var option = {
+          title: {
+            text: '罚款金额数据下钻',
+            left: 'center',
+            textStyle: {
+              fontSize: 14,
+            },
+          },
+          // visualMap: {
+          //   type: 'continuous',
+          //   min: 0,
+          //   max: 50,
+          //   inRange: {
+          //     color: ['#2F93C8', '#AEC48F', '#FFDB5C', '#F98862']
+          //   }
+          // },
+          series: {
+            type: 'sunburst',
+            data: innerpie,
+            radius: [0, '70%'],
+            emphasis: {
+              focus: 'ancestor'
+            },
+            label: {
+              position: 'inner',
+              fontSize: 12,
+              // formatter: function (value) {
+              //   console.log(value)
+              //   if (value.name.indexOf('煤业公司') > -1) {
+              //     value.name = value.name.slice(0, 2)
+              //     return value.name
+              //   }
+              //   if(value.name==='安全检管处'){
+              //     return '安检'
+              //   }
+              //   if(value.name==='一通三防处'){
+              //     return '通防'
+              //   }
+              //   if(value.name==='机电设备处'){
+              //     return '机电'
+              //   }
+              //   if(value.name==='地测防治水'){
+              //     return '地测'
+              //   }
+              //   if(value.name==='调度处'){
+              //     return '调度'
+              //   }
+              // }
+            },
+            itemStyle: {
+              borderWidth: 1
+            },
+            levels: [{}, {
+              r0: '15%',
+              r: '35%',
+              itemStyle: {
+                borderWidth: 2
+              },
+              label: {
+                rotate: 'radial'
+              }
+            }, {
+              r0: '35%',
+              r: '70%',
+              label: {
+                position: 'outside',
+              }
+            }, {
+              r0: '70%',
+              r: '10%',
+              label: {
+                position: 'outside',
+                padding: 3,
+                silent: false
+              },
+              itemStyle: {
+                borderWidth: 3
+              }
+            }]
+          }
+        }
+
+        myChart.setOption(option)
+        window.addEventListener('resize', () => {
+          myChart.resize()
+        })
+      }
+    }
+
+  }
+</script>
+
+<style scoped>
+
+</style>

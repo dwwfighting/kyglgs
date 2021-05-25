@@ -1,0 +1,149 @@
+<template>
+  <el-row>
+    <el-col :span="24">
+      <!--      <p style="background-color: #ffffff">上级和处室共罚款{{ penalytotal }}元</p>-->
+      <div ref="twopies" :style="{height:'400px',width:'100%' ,background:'#ffffff'}" />
+    </el-col>
+  </el-row>
+</template>
+
+<script>
+
+import 'echarts/theme/vintage'
+
+export default {
+  name: 'Penaltycompie',
+  data() {
+    return {
+      compenaltytotal: this.$store.state.basechartdata.compenaltytotal
+    }
+  },
+  created() {
+    console.log(this.$store.state.basechartdata.compenaltytotal)
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.init()
+    })
+  },
+  methods: {
+    init() {
+      var myChart = this.$echarts.init((this.$refs.twopies), 'vintage')
+      var arr = this.compenaltytotal
+      var legenddata = []
+      var innerpie = []
+      var outerpie = []
+
+      // console.log(arr)
+
+      arr.forEach(function(value, index) {
+        legenddata.push(value['penaltycom__coalcompanyname'])
+        const valuedata = {}
+
+        if (value['penaltycom__coalcompanyname'] !== 'total') {
+          valuedata.value = value['total']
+          valuedata.name = value['penaltycom__coalcompanyname']
+          innerpie.push(valuedata)
+          // valueinnerobj.value =
+         var obj = value
+        delete obj.penaltycom__coalcompanyname
+        delete obj.total
+        var comkeys = Object.keys(obj)
+        for(var i = 0; i < comkeys.length;i++){
+          var valueinnerobj = {}
+          valueinnerobj.value = obj[comkeys[i]]
+          valueinnerobj.name = comkeys[i]
+          outerpie.push(valueinnerobj)
+        }
+        }
+      })
+      console.log(innerpie)
+      console.log(outerpie)
+
+      var option = {
+        tooltip: {
+          trigger: 'item',
+          formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+          data: legenddata
+        },
+        series: [
+          {
+            name: '公司名称',
+            type: 'pie',
+            center: ['50%', '55%'],
+            selectedMode: 'single',
+            radius: [0, '35%'],
+            label: {
+              position: 'inner',
+              fontSize: 12,
+              formatter: function(value) {
+                if (value.data['name'].indexOf('煤业公司') > -1) {
+                  value.data['name'] = value.data['name'].slice(0, 2)
+                  return value.data['name']
+                }
+              }
+            },
+            labelLine: {
+              show: false
+            },
+            data: innerpie
+          },
+          {
+            name: '对应罚款',
+            type: 'pie',
+            center: ['50%', '55%'],
+            radius: ['45%', '60%'],
+            labelLine: {
+              length: 20
+            },
+            label: {
+              // formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+              backgroundColor: '#F6F8FC',
+              borderColor: '#8C8D8E',
+              borderWidth: 1,
+              borderRadius: 4,
+              rich: {
+                a: {
+                  color: '#6E7079',
+                  lineHeight: 22,
+                  align: 'center'
+                },
+                hr: {
+                  borderColor: '#8C8D8E',
+                  width: '100%',
+                  borderWidth: 1,
+                  height: 0
+                },
+                b: {
+                  color: '#4C5058',
+                  fontSize: 14,
+                  fontWeight: 'bold',
+                  lineHeight: 33
+                },
+                per: {
+                  color: '#fff',
+                  backgroundColor: '#4C5058',
+                  padding: [3, 4],
+                  borderRadius: 4
+                }
+              }
+            },
+            data: outerpie
+          }
+        ]
+      }
+      myChart.setOption(option)
+      window.addEventListener('resize', () => {
+        myChart.resize()
+      })
+    }
+  }
+
+}
+</script>
+
+<style scoped>
+
+</style>

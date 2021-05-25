@@ -1,0 +1,81 @@
+
+
+
+
+/* 必要布局样式css */
+
+.cation-content .cation-list:nth-child(1){
+   border-top: 1px solid rgba(75, 128, 50, 0.2);
+}
+.cation-middle {
+    line-height: 16px;
+    padding: 0px 20px;
+    font-size: 14px;
+}
+
+.cation-list {
+    overflow: hidden;
+    border-bottom: 1px solid rgba(75, 128, 50, 0.2);
+}
+
+.cation-list dt {
+    float: left;
+    width: 84px;
+    font-weight: 700;
+    line-height: 41px;
+    position: relative;
+    color: #000000;
+}
+
+:before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*为每个dt元素填加小三角*/
+.cation-list dt:after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 18px;
+    border: 1px solid #333;
+    border-width: 0 1px 1px 0;
+    width: 4px;
+    height: 4px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.cation-list dd {
+    border-bottom: 1px dotted #e00007;
+    margin-left: 64px;
+    overflow: hidden;
+}
+.cation-middle .selectorcommit{
+    margin:0 auto;
+    text-align:center;
+    padding: 3px;
+}
+.cation-list dd a {
+    color: #8d8d91;
+    font-size: 14px;
+    line-height: 14px;
+    height: 14px;
+    float: left;
+    border-right: 1px solid #e0e0e0;
+    padding: 0 18px;
+    margin: 17px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

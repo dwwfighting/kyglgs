@@ -1,0 +1,16 @@
+.detailcontainer{
+  margin: 0 auto;
+  padding: 5px;
+  .detailheader{
+    padding: 5px;
+    text-align:center;
+  }
+  .detailbody{
+
+    p{
+      padding: 5px 0;
+      letter-spacing:1px;
+      line-height: 23px;
+    }
+  }
+}
